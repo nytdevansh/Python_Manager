@@ -1,0 +1,4 @@
+# Dependencies for the multi-version demo
+requests>=2.28.0
+click>=8.0.0
+scipy==1.10.1
