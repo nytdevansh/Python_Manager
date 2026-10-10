@@ -1,6 +1,6 @@
 # 🚀 pymanager
 
-[![Python Versions](https://img.shields.io/badge/python-3.8%20%7C%203.9%20%7C%203.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue.svg)](https://python.org)
+[![Python Versions](https://img.shields.io/badge/python-3.8%20%7C%203.9%20%7C%203.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14%20%7C%203.15-blue.svg)](https://python.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Tests](https://img.shields.io/badge/tests-50%2F50%20passing-brightgreen.svg)](tests/)
 
@@ -10,12 +10,12 @@
 
 ## 💡 The Problem
 
-You want to upgrade to the latest Python version (e.g. Python 3.14) to take advantage of speedups and new language features. But your project depends on a critical library (or one of its dependencies) that only supports an older Python version (e.g. `< 3.12`):
+You want to upgrade to the latest Python version (e.g. Python 3.15) to take advantage of speedups and new language features. But your project depends on a critical library (or one of its dependencies) that only supports an older Python version (e.g. `< 3.12`):
 
 ```text
 ERROR: Could not find a version that satisfies the requirement scipy==1.10.1
 (from versions: none)
-ERROR: Package 'scipy' requires a different Python: 3.14.0 not in '<3.12,>=3.8'
+ERROR: Package 'scipy' requires a different Python: 3.15.0 not in '<3.12,>=3.8'
 ```
 
 Until now, you had two bad choices:

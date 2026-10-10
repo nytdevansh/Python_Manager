@@ -80,3 +80,19 @@ def test_resolve_invalid_specifier(mock_query, resolver):
     assert res.compatible is True
     assert res.recommended_python == "3.10"
     assert "Invalid specifier" in res.reason
+
+
+@patch('pymanager.resolver.query_package_info')
+def test_resolve_from_python_3_15_to_older_version(mock_query, resolver):
+    mock_query.return_value = PackageInfo(
+        name="legacy_lib",
+        version="1.0",
+        requires_python="<3.12,>=3.8",
+        classifiers=[]
+    )
+    # Developer upgrades to Python 3.15: tool detects incompatibility and picks highest <3.12 (3.11.x)
+    res = resolver.resolve("legacy_lib", "3.15.0")
+    assert res.compatible is False
+    assert res.recommended_python.startswith("3.11")
+    assert "Incompatible with Python 3.15.0" in res.reason
+

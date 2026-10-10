@@ -46,8 +46,8 @@ def get_supported_python_versions(package_name: str, package_version: Optional[s
     # If requires_python is present, validate or generate range
     if info.requires_python:
         spec = SpecifierSet(info.requires_python)
-        # Standard versions to check against
-        test_versions = [f"3.{x}" for x in range(7, 16)] # 3.7 to 3.15
+        # Standard versions to check against (3.7 through 3.17)
+        test_versions = [f"3.{x}" for x in range(7, 18)]
         for tv in test_versions:
             if spec.contains(tv):
                 supported_versions.add(tv)

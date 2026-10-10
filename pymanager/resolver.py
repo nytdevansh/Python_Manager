@@ -14,6 +14,8 @@ class VersionResolver:
     def __init__(self):
         # Stable patch releases for downloading and compiling from python.org
         self.known_pythons = [
+            "3.15.0",
+            "3.14.0",
             "3.13.2",
             "3.12.9",
             "3.11.9",
